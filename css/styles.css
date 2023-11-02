@@ -706,7 +706,7 @@ background-color: rgba(46, 47, 66, 0.40);
 opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 250ms linear, visibility 250ms linear;
+    transition: transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -731,7 +731,9 @@ width: 408px;
 min-height: 584px;
 border-radius: 4px;
 background-color: #FCFCFC;
-padding: 24px;
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+box-shadow: зі значенням 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+padding: 72px 24px 24px 24px;
 }
 
 
@@ -740,20 +742,24 @@ padding: 24px;
     top: 24px;
     right: 24px;
     height: 24px;
+    width: 24px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.10);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   
     fill: #2E2F42;
+    padding: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
     
 }
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
+    border: none;
     background-color:#404BBF;
     fill: #FFFFFF;
 }
@@ -772,7 +778,7 @@ padding: 24px;
     letter-spacing: 0.02em;
     color: var(--NAVY-BLUE, #2E2F42);
     margin-bottom: 16px;
-    margin-top: 48px;
+
 }
 
 
@@ -782,7 +788,7 @@ padding: 24px;
     display: block;
         font-size: 12px;
         font-weight: 400;
-        line-height: 1.4em;
+        line-height: 1.17em;
         letter-spacing: 0.04em;
         color: var(--LIGHT-SLATE, #8E8F99);
         margin-bottom: 4px;
@@ -795,11 +801,17 @@ padding: 24px;
     border-radius: 4px;
     border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
 .review-form-wrapper {
     margin-bottom: 8px;
+}
+.review-form-checkbox-wrapper{
+    margin-bottom: 16px;
+
 }
 
 .review-form-icon-filed {
@@ -808,7 +820,8 @@ padding: 24px;
     left: 16px;
     transform: translateY(-50%);
     fill: #2E2F42;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -830,7 +843,7 @@ padding: 24px;
 .review-form-message {
     width: 100%;
     height: 120px;
-    padding: 12px 16px;
+
        resize: none;
         outline-color: transparent;
             outline-offset: 7px;
@@ -839,8 +852,10 @@ padding: 24px;
         border: 1px solid rgba(46, 47, 66, 0.40);
         font-size: 12px;
         font-weight: 400;
-        line-height: 1.16em;
+        line-height: 1.17;
         letter-spacing: 0.04em;
+        background-color: transparent;
+        padding: 8px 16px;
         color: rgba(46, 47, 66, 0.40);
         
 }
@@ -858,7 +873,7 @@ color: rgba(46, 47, 66, 0.40);
         font-family: Roboto;
         font-size: 12px;
         font-weight: 400;
-        line-height: 1.16em;
+        line-height: 1.17em;
         letter-spacing: 0.04em;
         color: var(--LIGHT-SLATE, #8E8F99);
 }
@@ -868,6 +883,11 @@ color: rgba(46, 47, 66, 0.40);
     letter-spacing: 0.04em;
     text-decoration-line: underline;
 
+}
+
+.review-form-checkbox-icon {
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .review-form-own-checkbox {
@@ -882,9 +902,13 @@ align-items: center;
     background: var(--DAIRY, #FCFCFC);
     cursor: pointer;
     fill: transparent;
-    margin-right: 8px;
-    
+    margin-right: 8px; 
 
+}
+
+.review-form-checkbox:checked {
+background-color: #404bbf;
+border: none;
 }
 
 .review-form-checkbox-wrapper {
@@ -894,7 +918,8 @@ align-items: center;
 .review-form-checkbox:checked
  + .review-form-checkbox-label
 .review-form-own-checkbox {
-    background-color: #4D5AE5;
+
+    background-color: #404bbf;
     fill:#F4F4FD;
 }
 
@@ -920,10 +945,12 @@ border-radius: 4px;
         padding: 16px 32px;
         align-items: flex-start;
             min-width: 169px;
-            min-height: 56px;
+height: 56px;
+border: none;
                     display: block;
                         margin-left: auto;
                         margin-right: auto;
+                        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 

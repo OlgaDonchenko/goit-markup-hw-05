@@ -528,15 +528,13 @@
 
         <form class="review-form">
           <div class="review-form-wrapper">
-            <label class="review-form-label" for="user-first-name">
-              Name
-            </label>
+            <label class="review-form-label" for="user-name"> Name </label>
             <div class="review-form-input-wrapper">
               <input
                 class="review-form-field"
                 type="text"
                 name="user_first_name"
-                id="user-first-name"
+                id="user-name"
                 required
                 pattern="[a-zA-Zа-яА-ЯїЇіІйЙєЄ'ґҐ]+"
                 title="Olga"
@@ -593,7 +591,7 @@
             </label>
             <textarea
               class="review-form-message"
-              name="user_comment"
+              name="user-comment"
               placeholder="Text input"
               id="user-comment"
               required
@@ -603,10 +601,10 @@
             <input
               class="review-form-checkbox visually-hidden"
               type="checkbox"
-              name="user_policy"
+              name="user-privacy"
               value="true"
               required
-              id="user-policy"
+              id="user-privacy"
             />
             <label class="review-form-checkbox-label" for="user-policy">
               <span class="review-form-own-checkbox">
