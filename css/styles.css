@@ -741,7 +741,7 @@ margin-left: 80px;
 
 .footer-subscribe-btn {
     display: flex;
-    width: 165px;
+min-width: 165px;
     height: 40px;
     justify-content: center;
     align-items: center;
@@ -869,6 +869,15 @@ padding: 72px 24px 24px 24px;
         flex-direction: column;
    
 }
+.review-form-label {
+font-size: 12px;
+line-height: 1.17em;
+letter-spacing: 0.04em;
+color: #8e8f99;
+display: block;
+margin-bottom: 4px;
+
+}
 
 .review-form-field {
     width: 100%;
@@ -888,7 +897,9 @@ padding: 72px 24px 24px 24px;
 .review-form-wrapper {
     margin-bottom: 8px;
 }
-
+.review-form-wrapper-comment {
+    margin-bottom: 16px;
+}
 .review-form-icon-filed {
     position: absolute;
     top: 50%;
