@@ -813,7 +813,7 @@ padding: 72px 24px 24px 24px;
 }
 
 .review-form-wrapper {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .review-form-icon-filed {
@@ -827,7 +827,7 @@ padding: 72px 24px 24px 24px;
 
 .review-form-input-wrapper {
     position: relative;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .review-form-field:focus {
@@ -905,6 +905,7 @@ align-items: center;
 
 .review-form-checkbox-wrapper {
     margin-bottom: 24px;
+    margin-top: 16px;
 }
 
 .review-form-checkbox:focus
@@ -914,14 +915,21 @@ align-items: center;
 }
 
 .review-form-checkbox:checked + .review-form-checkbox-label
- .review-form-own-checkbox .review-form-checkbox-icon {
+ .review-form-own-checkbox {
     fill: #F4F4FD;
     background-color: #404bbf;
     border: none;
-    width: 16px;
-    height: 16px;
+   
 }
 
+
+/* 
+.review-form-checkbox:checked 
++.review-form-checkbox-label .review-form-own-checkbox {
+    background-color: #fd9222;
+    fill: #ffffff;
+}
+ */
 
               /* ========BUTTON========== */
 .review-form-btn {
