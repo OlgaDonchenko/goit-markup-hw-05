@@ -706,12 +706,11 @@ margin-left: 80px;
         margin-bottom: 16px;
 }
 
-/* .footer-subscribe-form {
+.footer-subscribe-form {
     display: flex;
     gap: 24px;
-   
-
-} */
+  }
+  
 .footer-subscribe-label {
     display: flex;
     gap: 24px;
@@ -731,7 +730,7 @@ margin-left: 80px;
         font-size: 12px;
         font-weight: 400;
         line-height: 1.5em;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.04em;
         color: #ffffff;
         padding-left: 16px;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -868,17 +867,7 @@ padding: 72px 24px 24px 24px;
     display: flex;
         width: 360px;
         flex-direction: column;
-
-      
-}
-.review-form-label {
-    display: block;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 1.17em;
-        letter-spacing: 0.04em;
-        color: var(--LIGHT-SLATE, #8E8F99);
-        margin-bottom: 4px;
+   
 }
 
 .review-form-field {
@@ -892,9 +881,12 @@ padding: 72px 24px 24px 24px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     outline: transparent;
 }
+.review-form-wrap {
+    margin-bottom: 8px;
+}
 
 .review-form-wrapper {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .review-form-icon-filed {
@@ -908,7 +900,7 @@ padding: 72px 24px 24px 24px;
 
 .review-form-input-wrapper {
     position: relative;
-    margin-bottom: 8px;
+
 }
 
 .review-form-field:focus {
@@ -1004,13 +996,6 @@ align-items: center;
 }
 
 
-/* 
-.review-form-checkbox:checked 
-+.review-form-checkbox-label .review-form-own-checkbox {
-    background-color: #fd9222;
-    fill: #ffffff;
-}
- */
 
               /* ========BUTTON========== */
 .review-form-btn {
